@@ -26,13 +26,13 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/btn_delete"
+                android:id="@+id/btn_factorial"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="#ccc"
                 android:minHeight="80dp"
-                android:text="C"
+                android:text="!"
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="30sp"
                 android:textStyle="bold" />
@@ -51,7 +51,7 @@
                 android:textStyle="bold" />
 
             <Button
-                android:id="@+id/btn_percentage"
+                android:id="@+id/btn_mod"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="2dp"
@@ -110,7 +110,7 @@
                 android:textSize="25sp" />
 
             <Button
-                android:id="@+id/btn_multiple"
+                android:id="@+id/btn_product"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -166,7 +166,7 @@
                 android:textSize="25sp" />
 
             <Button
-                android:id="@+id/btn_minus"
+                android:id="@+id/btn_sub"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -222,7 +222,7 @@
                 android:textSize="25sp" />
 
             <Button
-                android:id="@+id/btn_plus"
+                android:id="@+id/btn_add"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
