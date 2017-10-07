@@ -12,9 +12,6 @@ public class MainActivity extends AppCompatActivity {
     Button subButton;
     Button mulButton;
     Button divButton;
-    EditText num1;
-    EditText num2;
-    EditText result;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
