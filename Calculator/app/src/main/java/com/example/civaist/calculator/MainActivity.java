@@ -31,15 +31,34 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
         addButton = (Button) findViewById(R.id.btn_add);
         subButton=(Button) findViewById(R.id.btn_sub);
-        oneButton=(Button)findViewById(R.id.btn_one);
         prodButton=(Button)findViewById(R.id.btn_product);
         equalButton=(Button)findViewById(R.id.btn_equal);
+        zeroButton=(Button)findViewById(R.id.btn_zero);
+        oneButton=(Button)findViewById(R.id.btn_one);
+        twoButton=(Button)findViewById(R.id.btn_two);
+        threeButton=(Button)findViewById(R.id.btn_three);
+        fourButton=(Button)findViewById(R.id.btn_four);
+        fiveButton=(Button)findViewById(R.id.btn_five);
+        sixButton=(Button)findViewById(R.id.btn_six);
+        sevenButton=(Button)findViewById(R.id.btn_seven);
+        eightButton=(Button)findViewById(R.id.btn_eight);
+        nineButton=(Button)findViewById(R.id.btn_nine);
         textInput=(TextView) findViewById(R.id.edit_input);
         textOutput=(TextView) findViewById(R.id.edit_output);
-        oneButton.setOnClickListener(this);
         addButton.setOnClickListener(this);
         subButton.setOnClickListener(this);
+        prodButton.setOnClickListener(this);
         equalButton.setOnClickListener(this);
+        zeroButton.setOnClickListener(this);
+        oneButton.setOnClickListener(this);
+        twoButton.setOnClickListener(this);
+        threeButton.setOnClickListener(this);
+        fourButton.setOnClickListener(this);
+        fiveButton.setOnClickListener(this);
+        sixButton.setOnClickListener(this);
+        sevenButton.setOnClickListener(this);
+        eightButton.setOnClickListener(this);
+        nineButton.setOnClickListener(this);
     }
 
     @Override
