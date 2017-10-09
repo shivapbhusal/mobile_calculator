@@ -4,7 +4,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -22,6 +21,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public Button sevenButton;
     public Button eightButton;
     public Button nineButton;
+    public Button equalButton;
     public TextView textInput;
     public TextView textOutput;
 
@@ -33,11 +33,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         subButton=(Button) findViewById(R.id.btn_sub);
         oneButton=(Button)findViewById(R.id.btn_one);
         prodButton=(Button)findViewById(R.id.btn_product);
+        equalButton=(Button)findViewById(R.id.btn_equal);
         textInput=(TextView) findViewById(R.id.edit_input);
         textOutput=(TextView) findViewById(R.id.edit_output);
         oneButton.setOnClickListener(this);
         addButton.setOnClickListener(this);
         subButton.setOnClickListener(this);
+        equalButton.setOnClickListener(this);
     }
 
     @Override
@@ -98,6 +100,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btn_nine:
                 expression=expression.concat("9");
                 textInput.setText(expression);
+                break;
+            case R.id.btn_equal:
+                Evaluate myEvaluate=new Evaluate();
+                float myresult=myEvaluate.evalExp(expression);
+                String result = Float.toString(myresult);
+                textOutput.setText(result);
                 break;
 
         }
