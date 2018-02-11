@@ -50,7 +50,7 @@
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="30sp"
                 android:textStyle="bold"
-                android:onClick="onClickButton"/>
+                android:onClick="onClickButton" />
 
             <Button
                 android:id="@+id/btn_mod"
