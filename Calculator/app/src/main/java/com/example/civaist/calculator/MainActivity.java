@@ -7,8 +7,8 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity{
     public static String expression;
-    public TextView textInput;
-    public TextView textOutput;
+    TextView textInput;
+    TextView textOutput;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
