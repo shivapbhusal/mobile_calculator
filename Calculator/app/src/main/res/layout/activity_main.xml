@@ -35,7 +35,8 @@
                 android:text="!"
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="30sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:onClick="onClickButton"/>
 
             <Button
                 android:id="@+id/btn_small_bracket"
@@ -48,7 +49,8 @@
                 android:text="( )"
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="30sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:onClick="onClickButton" />
 
             <Button
                 android:id="@+id/btn_mod"
@@ -62,7 +64,8 @@
                 android:text="%"
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="30sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:onClick="onClickButton"/>
 
         </LinearLayout>
 
@@ -82,7 +85,8 @@
                 android:minHeight="80dp"
                 android:text="7"
                 android:textColor="#333"
-                android:textSize="25sp" />
+                android:textSize="25sp"
+                android:onClick="onClickButton"/>
 
             <Button
                 android:id="@+id/btn_eight"
@@ -94,7 +98,8 @@
                 android:minHeight="80dp"
                 android:text="8"
                 android:textColor="#333"
-                android:textSize="25sp" />
+                android:textSize="25sp"
+                android:onClick="onClickButton"/>
 
             <Button
                 android:id="@+id/btn_nine"
@@ -107,7 +112,8 @@
                 android:minHeight="80dp"
                 android:text="9"
                 android:textColor="#333"
-                android:textSize="25sp" />
+                android:textSize="25sp"
+                android:onClick="onClickButton"/>
 
             <Button
                 android:id="@+id/btn_product"
@@ -119,7 +125,8 @@
                 android:text="X"
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="30sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:onClick="onClickButton"/>
         </LinearLayout>
 
 
@@ -138,7 +145,8 @@
                 android:minHeight="80dp"
                 android:text="4"
                 android:textColor="#333"
-                android:textSize="25sp" />
+                android:textSize="25sp"
+                android:onClick="onClickButton"/>
 
             <Button
                 android:id="@+id/btn_five"
@@ -150,7 +158,8 @@
                 android:minHeight="80dp"
                 android:text="5"
                 android:textColor="#333"
-                android:textSize="25sp" />
+                android:textSize="25sp"
+                android:onClick="onClickButton"/>
 
             <Button
                 android:id="@+id/btn_six"
@@ -163,7 +172,8 @@
                 android:minHeight="80dp"
                 android:text="6"
                 android:textColor="#333"
-                android:textSize="25sp" />
+                android:textSize="25sp"
+                android:onClick="onClickButton"/>
 
             <Button
                 android:id="@+id/btn_sub"
@@ -175,7 +185,8 @@
                 android:text="-"
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="30sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:onClick="onClickButton"/>
         </LinearLayout>
 
 
@@ -194,7 +205,8 @@
                 android:minHeight="80dp"
                 android:text="1"
                 android:textColor="#333"
-                android:textSize="25sp" />
+                android:textSize="25sp"
+                android:onClick="onClickButton"/>
 
             <Button
                 android:id="@+id/btn_two"
@@ -206,7 +218,8 @@
                 android:minHeight="80dp"
                 android:text="2"
                 android:textColor="#333"
-                android:textSize="25sp" />
+                android:textSize="25sp"
+                android:onClick="onClickButton"/>
 
             <Button
                 android:id="@+id/btn_three"
@@ -219,7 +232,8 @@
                 android:minHeight="80dp"
                 android:text="3"
                 android:textColor="#333"
-                android:textSize="25sp" />
+                android:textSize="25sp"
+                android:onClick="onClickButton"/>
 
             <Button
                 android:id="@+id/btn_add"
@@ -231,7 +245,8 @@
                 android:text="+"
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="30sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:onClick="onClickButton"/>
         </LinearLayout>
 
 
@@ -250,7 +265,8 @@
                 android:minHeight="80dp"
                 android:text="."
                 android:textColor="#333"
-                android:textSize="25sp" />
+                android:textSize="25sp"
+                android:onClick="onClickButton"/>
 
             <Button
                 android:id="@+id/btn_zero"
@@ -262,7 +278,8 @@
                 android:minHeight="80dp"
                 android:text="0"
                 android:textColor="#333"
-                android:textSize="25sp" />
+                android:textSize="25sp"
+                android:onClick="onClickButton"/>
 
             <Button
                 android:id="@+id/btn_divide"
@@ -275,7 +292,8 @@
                 android:minHeight="80dp"
                 android:text="/"
                 android:textColor="#333"
-                android:textSize="25sp" />
+                android:textSize="25sp"
+                android:onClick="onClickButton"/>
 
             <Button
                 android:id="@+id/btn_equal"
@@ -287,10 +305,10 @@
                 android:text="="
                 android:textColor="#fff"
                 android:textSize="30sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:onClick="onClickButton"/>
         </LinearLayout>
 
     </LinearLayout>
-
 
 </LinearLayout>
