@@ -5,10 +5,10 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity{
     public static String expression;
-    public static TextView textInput;
-    public static TextView textOutput;
+    public TextView textInput;
+    public TextView textOutput;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,14 +20,13 @@ public class MainActivity extends AppCompatActivity {
         setInputOutput();
     }
 
-    public static void onClickButton(View view) {
-
+    public void onClickButton(View view) {
+        Toast.makeText(MainActivity.this,"Hello one !", Toast.LENGTH_LONG).show();
     }
 
-    public static void setInputOutput()
+    public void setInputOutput()
     {
         textInput.setText("Hello");
-        textOutput.setText("Abc");
     }
 }
 
