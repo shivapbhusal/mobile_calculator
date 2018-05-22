@@ -1,63 +1,60 @@
 package com.example.civaist.calculator;
-import java.util.*;
-
-/**
- * Created by Shiva on 5/21/2018.
- */
+import java.util.Stack;
 
 public class ShuntingYard {
-    private enum Operator {
-        ADD(1), SUBSTRACT(2), MULTIPLY(3), DIVIDE(4);
-        final int Precedance;
 
-        Operator(int p) {
-            Precedance = p;
-        }
-
+    public static void main(String[] args) {
+        String infix = "3 + 4 * 2 / ( 1 - 5 ) ^ 2 ^ 3";
+        System.out.printf("infix:   %s%n", infix);
+        System.out.printf("postfix: %s%n", infixToPostfix(infix));
     }
 
-    private static Map<String, Operator> ops = new HashMap<>
-    String,
+    static String infixToPostfix(String infix) {
+        /* To find out the precedence, we take the index of the
+           token in the ops string and divide by 2 (rounding down).
+           This will give us: 0, 0, 1, 1, 2 */
+        final String ops = "-+/*^";
 
-    put("+",Operator.ADD);
+        StringBuilder sb = new StringBuilder();
+        Stack<Integer> s = new Stack<>();
 
-    put("-",Operator.SUBSTRACT);
+        for (String token : infix.split("\\s")) {
+            if (token.isEmpty())
+                continue;
+            char c = token.charAt(0);
+            int idx = ops.indexOf(c);
 
-    put("*",Operator.MULTIPLY);
+            // check for operator
+            if (idx != -1) {
+                if (s.isEmpty())
+                    s.push(idx);
 
-    put("/",Operator.DIVIDE);
-}};
-
-private static boolean isHigherPrec(String op, String sub)
-        {
-            return (ops.containsKey(sub) && ops.get(sub).precedence >=)
+                else {
+                    while (!s.isEmpty()) {
+                        int prec2 = s.peek() / 2;
+                        int prec1 = idx / 2;
+                        if (prec2 > prec1 || (prec2 == prec1 && c != '^'))
+                            sb.append(ops.charAt(s.pop())).append(' ');
+                        else break;
+                    }
+                    s.push(idx);
+                }
+            }
+            else if (c == '(') {
+                s.push(-2); // -2 stands for '('
+            }
+            else if (c == ')') {
+                // until '(' on stack, pop operators.
+                while (s.peek() != -2)
+                    sb.append(ops.charAt(s.pop())).append(' ');
+                s.pop();
+            }
+            else {
+                sb.append(token).append(' ');
+            }
         }
-
-public static String postFix(String infix)
-        {
-            StringBuilder output = new StringBuilder();
-            Deque<String> stack  = new LinkedList<>();
-
-            for (String token: infix.split("\\s")){
-        if(ops.containsKey(token)){
-        while(!stack.isEmpty()&&isHigherPrec(token,stoutput.append(stack.pop()).append(' ')));
-        stack.push(token);
-        }
-        else if(token.equals("("))
-        {
-        stack.push(token);
-        }
-        } else if (token.equals(")")){
-                while (! stack.peek().equals("("))
-        {
-            output.append(stack.pop()).append(' ');
-            stack.pop();
-        }
-        else {
-                    output.append(token).append(' ');
-        }
-
-        while (!stack.isEmpty())
-        output.append(stack.pop())
-
-        }
+        while (!s.isEmpty())
+            sb.append(ops.charAt(s.pop())).append(' ');
+        return sb.toString();
+    }
+}
