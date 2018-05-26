@@ -20,19 +20,19 @@ public class MainActivity extends AppCompatActivity{
     public void onClickButton(View view) {
         switch(view.getId()) {
             case R.id.btn_add:
-                expression=expression.concat("+");
+                expression=expression.concat(" + ");
                 textInput.setText(expression);
                 break;
             case R.id.btn_sub:
-                expression=expression.concat("-");
+                expression=expression.concat(" - ");
                 textInput.setText(expression);
                 break;
             case R.id.btn_divide:
-                expression=expression.concat("/");
+                expression=expression.concat(" / ");
                 textInput.setText(expression);
                 break;
             case R.id.btn_product:
-                expression=expression.concat("*");
+                expression=expression.concat(" * ");
                 textInput.setText(expression);
                 break;
             case R.id.btn_zero:
