@@ -7,12 +7,12 @@ import org.junit.Test;
  *
  * @see <a href="http://d.android.com/tools/testing">Testing documentation</a>
  */
-public class ExampleUnitTest {
+public class EvaluateExpTest {
 
     @Test
     public void testPostFixComputation() throws Exception{
         EvaluateExp sh= new EvaluateExp();
-        ComputePostFix comp = new ComputePostFix();
-        System.out.println(sh.evaluate("10 - 20 * 10"));
+        double result=sh.evaluate("( 10 - 20 ) * 10");
+        assert(result==-100);
     }
 }

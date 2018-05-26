@@ -39,14 +39,28 @@
                 android:onClick="onClickButton"/>
 
             <Button
-                android:id="@+id/btn_small_bracket"
+                android:id="@+id/btn_small_bracket_start"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="2dp"
                 android:layout_weight="1"
                 android:background="#ccc"
                 android:minHeight="80dp"
-                android:text="( )"
+                android:text="("
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:onClick="onClickButton" />
+
+            <Button
+                android:id="@+id/btn_small_bracket_end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_weight="1"
+                android:background="#ccc"
+                android:minHeight="80dp"
+                android:text=")"
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="30sp"
                 android:textStyle="bold"
@@ -62,6 +76,21 @@
                 android:background="#ccc"
                 android:minHeight="80dp"
                 android:text="%"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:onClick="onClickButton"/>
+
+            <Button
+                android:id="@+id/btn_clear_screen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                android:background="#ccc"
+                android:minHeight="80dp"
+                android:text="c"
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="30sp"
                 android:textStyle="bold"
