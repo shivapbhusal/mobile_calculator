@@ -1,9 +1,6 @@
 package com.example.civaist.calculator;
 
 import org.junit.Test;
-
-import static com.example.civaist.calculator.ComputePostFix.compute;
-import static com.example.civaist.calculator.ShuntingYard.infixToPostfix;
 import static org.junit.Assert.*;
 
 /**
@@ -15,7 +12,9 @@ public class ExampleUnitTest {
 
     @Test
     public void testPostFixComputation() throws Exception{
-        System.out.println("3 4 2 * 1 5 - 2 3 ^ ^ / +");
-        System.out.println(compute("3 4 2 * 1 5 - 2 3 ^ ^ / +"));
+        System.out.println("10 * 20");
+        ShuntingYard sh= new ShuntingYard();
+        ComputePostFix comp = new ComputePostFix();
+        System.out.println(sh.infixToPostfix("10 * 20 + 10"));
     }
 }

@@ -3,13 +3,7 @@ import java.util.Stack;
 
 public class ShuntingYard {
 
-    public static void main(String[] args) {
-        String infix = "3 + 4 * 2 / ( 1 - 5 ) ^ 2 ^ 3";
-        System.out.printf("infix:   %s%n", infix);
-        System.out.printf("postfix: %s%n", infixToPostfix(infix));
-    }
-
-    static String infixToPostfix(String infix) {
+    public static String infixToPostfix(String infix) {
         /* To find out the precedence, we take the index of the
            token in the ops string and divide by 2 (rounding down).
            This will give us: 0, 0, 1, 1, 2 */
