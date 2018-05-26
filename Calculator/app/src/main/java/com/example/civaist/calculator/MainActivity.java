@@ -77,9 +77,9 @@ public class MainActivity extends AppCompatActivity{
                 break;
             case R.id.btn_equal:
                 Evaluate myEvaluate=new Evaluate();
-                ShuntingYard sh = new ShuntingYard();
-                String myResult=sh.infixToPostfix(expression);
-                textOutput.setText(myResult);
+                EvaluateExp sh = new EvaluateExp();
+                double myResult=sh.evaluate(expression);
+                textOutput.setText(Double.toString(myResult));
                 break;
         }
     }
