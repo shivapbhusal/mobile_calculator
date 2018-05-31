@@ -13,6 +13,6 @@ public class EvaluateExpTest {
     public void testEvaluate() throws Exception{
         EvaluateExp sh= new EvaluateExp();
         double result=sh.evaluate("( 0.5 - 1.5 ) * 10");
-        assert(result==-10);
+        assert(result==-10); // add test cases 
     }
 }
