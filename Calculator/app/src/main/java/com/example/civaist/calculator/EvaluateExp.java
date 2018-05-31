@@ -3,12 +3,12 @@ import java.util.Stack;
 
 public class EvaluateExp {
 
-    public static int evaluate(String expression)
+    public static double evaluate(String expression)
     {
         char[] tokens = expression.toCharArray();
 
         // Stack for numbers: 'values'
-        Stack<Integer> values = new Stack<Integer>();
+        Stack<Double> values = new Stack<Double>();
 
         // Stack for Operators: 'ops'
         Stack<Character> ops = new Stack<Character>();
@@ -24,9 +24,9 @@ public class EvaluateExp {
             {
                 StringBuffer sbuf = new StringBuffer();
                 // There may be more than one digits in number
-                while (i < tokens.length && tokens[i] >= '0' && tokens[i] <= '9')
+                while (i < tokens.length && ((tokens[i] >= '0' && tokens[i] <= '9')||tokens[i]=='.'))
                     sbuf.append(tokens[i++]);
-                values.push(Integer.parseInt(sbuf.toString()));
+                values.push(Double.parseDouble(sbuf.toString()));
             }
 
             // Current token is an opening brace, push it to 'ops'
@@ -79,7 +79,7 @@ public class EvaluateExp {
 
     // A utility method to apply an operator 'op' on operands 'a'
     // and 'b'. Return the result.
-    public static int applyOp(char op, int b, int a)
+    public static double applyOp(char op, Double b, Double a)
     {
         switch (op)
         {

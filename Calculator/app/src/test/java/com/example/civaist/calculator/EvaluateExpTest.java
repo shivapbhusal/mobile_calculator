@@ -10,9 +10,9 @@ import org.junit.Test;
 public class EvaluateExpTest {
 
     @Test
-    public void testPostFixComputation() throws Exception{
+    public void testEvaluate() throws Exception{
         EvaluateExp sh= new EvaluateExp();
-        double result=sh.evaluate("( 10 - 20 ) * 10");
-        assert(result==-100);
+        double result=sh.evaluate("( 0.5 - 1.5 ) * 10");
+        assert(result==-10);
     }
 }
