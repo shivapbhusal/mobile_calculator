@@ -83,20 +83,24 @@ public class MainActivity extends AppCompatActivity{
                 expression=expression.concat(" ) ");
                 textInput.setText(expression);
                 break;
-            case R.id.btn_equal:
-                Evaluate myEvaluate=new Evaluate();
-                EvaluateExp sh = new EvaluateExp();
-                double myResult=sh.evaluate(expression);
-                textOutput.setText(Double.toString(myResult));
-                break;
             case R.id.btn_dot:
                 expression=expression.concat(".");
+                textInput.setText(expression);
+                break;
+            case R.id.btn_mod:
+                expression=expression.concat(" % ");
                 textInput.setText(expression);
                 break;
             case R.id.btn_clear_screen:
                 expression="";
                 textInput.setText("");
                 textOutput.setText("");
+                break;
+            case R.id.btn_equal:
+                Evaluate myEvaluate=new Evaluate();
+                EvaluateExp sh = new EvaluateExp();
+                double myResult=sh.evaluate(expression);
+                textOutput.setText(Double.toString(myResult));
                 break;
         }
     }

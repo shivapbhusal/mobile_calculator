@@ -43,7 +43,7 @@ public class EvaluateExp {
 
             // Current token is an operator.
             else if (tokens[i] == '+' || tokens[i] == '-' ||
-                    tokens[i] == '*' || tokens[i] == '/')
+                    tokens[i] == '*' || tokens[i] == '/' || tokens[i] =='%')
             {
                 // While top of 'ops' has same or greater precedence to current
                 // token, which is an operator. Apply operator on top of 'ops'
@@ -94,6 +94,11 @@ public class EvaluateExp {
                     throw new
                             UnsupportedOperationException("Cannot divide by zero");
                 return a / b;
+            case '%':
+                if (b==0)
+                    throw new
+                            UnsupportedOperationException("Cannot divide by zero");
+                return a %b;
         }
         return 0;
     }
